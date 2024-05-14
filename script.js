@@ -479,35 +479,35 @@ $('#sidebar-tabs').tabBouaici();
 $('.post-body strike').each(function () {
     var $t = $(this),
         $mtc = $t.text().trim();
-    if ($mtc == '$ads={1}') {
-        $t.replaceWith('<div id="Bouaici-new-before-E3lan"/>')
+    if ($mtc == '$Ads={1}') {
+        $t.replaceWith('<div id="Bouaici-new-before-Ads"/>')
     }
-    if ($mtc == '$ads={2}') {
-        $t.replaceWith('<div id="Bouaici-new-after-E3lan"/>')
-    }
-});
-$('#Bouaici-new-before-E3lan').each(function () {
-    var $t = $(this);
-    if ($t.length) {
-        $('#before-E3lan').appendTo($t)
+    if ($mtc == '$Ads={2}') {
+        $t.replaceWith('<div id="Bouaici-new-after-Ads"/>')
     }
 });
-$('#Bouaici-new-after-E3lan').each(function () {
+$('#Bouaici-new-before-Ads').each(function () {
     var $t = $(this);
     if ($t.length) {
-        $('#after-E3lan').appendTo($t)
+        $('#before-Ads').appendTo($t)
+    }
+});
+$('#Bouaici-new-after-Ads').each(function () {
+    var $t = $(this);
+    if ($t.length) {
+        $('#after-Ads').appendTo($t)
     }
 });
 $('#HTML200').each(function () {
     var $t = $(this);
     if ($t.length) {
-        $t.appendTo($('#before-E3lan'))
+        $t.appendTo($('#before-Ads'))
     }
 });
 $('#HTML300').each(function () {
     var $t = $(this);
     if ($t.length) {
-        $t.appendTo($('#after-E3lan'))
+        $t.appendTo($('#after-Ads'))
     }
 });
 $('.avatar-image-container img').attr('src', function ($this, i) {
@@ -1957,7 +1957,7 @@ jQuery(document).ready(function () {
         e.id = "levelmaxblock", e.innerHTML = '<div id="AdBlockBlocker"><div class="inner"><img src="' + AdBlockImage + '" alt="adblock" width="800px" height="600px" title="adblock"/></div></div>', document.body.append(e), document.body.style.overflow = "hidden"
     }
     var t = document.createElement("script");
-    t.type = "text/javascript", t.async = !0, t.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", t.onerror = function () {
+    t.type = "text/javascript", t.async = !0, t.src = "https://pagead2.googlesyndication.com/pagead/js/Adsbygoogle.js", t.onerror = function () {
         e(), window.adblock = !0
     };
     var i = document.getElementsByTagName("script")[0];
@@ -2194,3 +2194,5 @@ $(window).one("scroll", function () {
     }
 })
 ;
+
+
